@@ -1,25 +1,13 @@
-# Python Basics
+# Running Python
 
-This is a course of unknown length that will cover the basics of Python programming. It is intended for people who have experience programming in other languages, but have never programmed in Python before.
+When learning Python, you'll see it presented in several different ways. Here are some of the most common ways to run Python code:
 
-Each lesson will be a branch in this repository. The master branch will contain the README.md file you are currently reading. Each lesson will contain a README.md file that will explain the topic of the lesson and provide some examples. The lesson will also contain code samples.
-
-The lessons will be as follows:
-
-1. Lesson 1: Running Python (venv, jupyter notebooks, docker)
-2. Lesson 2: Python frameworks (Django, Flask, FastAPI)
-3. Lesson 3: Loosly typed or pydantic
-4. Lesson 4: Pandas, Tuples, and other Python-specific things
-
-The rest of the lessons will be added as we go along.
+1. **venv**: This allows you to configure a virtual environment for your Python projects. It is very common and often used by programmers working on Python projects that are not (normally) web applications.
+2. **Jupyter Notebook**: A web-based interactive environment that allows you to combine code, text, interactive elements (forms) and visualizations in a single document. This is commonly used in the ML/AI community.
+3. **Docker**: A containerization platform that allows you to run Python code in a container. Most commonly used in web applications.
 
 ## Important resources
 
-- [Python documentation](https://docs.python.org/3/)
-- [Jupyter notebooks](https://jupyter.org/)
-- [Django documentation](https://docs.djangoproject.com/en/3.2/)
-- [Flask documentation](https://flask.palletsprojects.com/en/2.0.x/)
-- [FastAPI documentation](https://fastapi.tiangolo.com/)
-- [Pandas documentation](https://pandas.pydata.org/docs/)
-- [Pydantic documentation](https://pydantic-docs.helpmanual.io/)
-- [Tuples documentation](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)
+- [venv](https://docs.python.org/3/library/venv.html)
+- [Jupyter Notebook](https://jupyter.org/)
+- [Docker](https://www.docker.com/)
