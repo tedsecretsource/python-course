@@ -4,6 +4,10 @@ This is a FastAPI demo application that demonstrates how to use FastAPI.
 
 To run the demo:
 
+1. Create a `.env` file in the root directory (same as this README). See [env.sample](env.sample) for details.
+
+2. Build the Docker image and start the container:
+
 ```bash
 cd FastAPI
 docker compose up
