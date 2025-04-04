@@ -1,0 +1,33 @@
+services:
+  postgresdb:
+    image: ankane/pgvector
+    container_name: postgresdb
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file:
+      - path: .env
+    restart: "always"
+
+
+  webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webserver
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/app
+    depends_on:
+      - postgresdb
+    restart: "always"
+    working_dir: /app
+    env_file:
+      - path: .env
+    command: ["fastapi", "run", "app/main.py", "--proxy-headers", "--port", "80", "--workers", "1", "--reload"]
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
+
+volumes:
+ db:
