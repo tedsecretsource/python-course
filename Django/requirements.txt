@@ -1,0 +1,11 @@
+Django
+
+# Database stuff
+pgvector # Vector database extension for PostgreSQL
+psycopg[binary,pool] # PostgreSQL driver for Python
+
+# Testing stuff
+pytest # Testing framework
+pytest-asyncio # Async testing for pytest
+pytest-mock # Mocking library for pytest
+faker # Fake data generation

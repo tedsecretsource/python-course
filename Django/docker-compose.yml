@@ -1,0 +1,33 @@
+services:
+  postgresdjango:
+    image: ankane/pgvector
+    container_name: postgresdjango
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file:
+      - path: .env
+    restart: "always"
+
+
+  djangowebserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: djangowebserver
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - postgresdjango
+    restart: "always"
+    working_dir: /usr/src/app
+    env_file:
+      - path: .env
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
+
+volumes:
+ db:
